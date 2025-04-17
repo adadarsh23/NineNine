@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+
+.main .sidebarWrapper {
+  height: 100vh;
+  background-color: #ffffff;
+}
+.main .sidebarWrapper .sidebar {
+  height: 100%;
+  background-color: #000000;
+}
+.log{
+  border-radius: 30px;
+}
+.run{
+  margin-right: 2px;
+}
+.button1{
+  position: relative;
+  padding: 10px 22px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button1:active {
+  transform: scale(0.96);
+}
+
+.button1:before,
+.button1:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button1:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #0d6efd 20%, transparent 30%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #0d6efd 15%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button1:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #0d6efd 15%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%),
+    radial-gradient(circle, #0d6efd 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.log:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* From Uiverse.io by alexruix */ 
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+ }
+ 
+ .card-details {
+  color: black;
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+ }
+ 
+ .card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+ }
+ 
+ .text-body {
+  color: rgb(134, 134, 134);
+ }
+ 
+ /*Text*/
+ .text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+ }
+ 
+ /*Hover*/
+ .card:hover {
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ /* From Uiverse.io by Dailleer */ 
+.card1 {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%); */
+  /* background-image: url(assets/image/wo.jpg); */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card1 svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card1:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card1:hover .card__content1 {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description1 {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* .card1:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+} */
+.input {
+  transition: border 0.2s ease-in-out;
+  min-width: 280px
+}
+.input:focus+.label,
+.input:active+.label,
+.input.filled+.label {
+  font-size: .75rem;
+  transition: all 0.2s ease-out;
+  top: -0.9rem;
+  background-color: #fff;
+  color: #1a73e8;
+  padding: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
+}
+.label {
+  transition: all 0.2s ease-out;
+  top: 0.4rem;
+  left: 0;
+}
+
+
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
+}
